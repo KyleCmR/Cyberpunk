@@ -7,8 +7,15 @@ public class DropOnDestoy : MonoBehaviour
     [SerializeField] GameObject dropItemPrefab;
     [SerializeField][Range(0f, 1f)] float chanse = 1f;
 
-    private void OnDestroy()
+    bool isQuitting = false;
+    private void OnApplicationQuit()
     {
+        isQuitting = true;
+    }
+    public void CheckDrop()
+    {
+        if (isQuitting) { return; }
+
         if (Random.value < chanse)
         {
             Transform t = Instantiate(dropItemPrefab).transform;

@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  hp: 2
-  damage: 1
+  hp: 20
+  damage: 20
   experience_reward: 400
 --- !u!95 &6379077964613426513
 Animator:
