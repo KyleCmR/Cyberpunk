@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6379077964613426513}
   - component: {fileID: 6328575426808586342}
   - component: {fileID: -4503344559817540824}
+  - component: {fileID: 7056358219737957225}
   m_Layer: 0
   m_Name: Enemy_1
   m_TagString: Untagged
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  hp: 20
+  hp: 4
   damage: 20
   experience_reward: 400
 --- !u!95 &6379077964613426513
@@ -201,3 +202,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItemPrefab: {fileID: 7324506661809814750, guid: 6cfcd69c477c0a54d9d1c22fed42f0ca, type: 3}
   chanse: 0.25
+--- !u!114 &7056358219737957225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379077964613426507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28b4e93ff2c9074fa35822861801ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

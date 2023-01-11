@@ -2,15 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawnTimer;
-    [SerializeField] GameObject player;
+    GameObject player;
     float timer;
+
+    private void Start()
+    {
+        player = GameManager.instance.playerTransform.gameObject;
+    }
 
     private void Update()
     {

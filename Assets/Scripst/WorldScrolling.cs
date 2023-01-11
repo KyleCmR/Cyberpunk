@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WorldScrolling : MonoBehaviour
 {
-    [SerializeField] Transform playerTransform;
+    Transform playerTransform;
     Vector2Int currentTilePosition = new Vector2Int(0,0);
     [SerializeField] Vector2Int playerTilePosition;
     Vector2Int onTileGridPlayerPosition;
@@ -26,6 +26,7 @@ public class WorldScrolling : MonoBehaviour
     private void Start()
     {
         UpdateTilesOnScreen();
+        playerTransform = GameManager.instance.playerTransform;
     }
     private void Update()
     {
@@ -55,8 +56,12 @@ public class WorldScrolling : MonoBehaviour
                 int tileToUpdate_y = CalculatePositionOnAxis(playerTilePosition.y + pov_y, false);
 
                 GameObject tile = terrainTiles[tileToUpdate_x, tileToUpdate_y];
-                tile.transform.position = CalculateTilePosition(playerTilePosition.x + pov_x, playerTilePosition.y + pov_y);
-
+                Vector3 newPosition = CalculateTilePosition(playerTilePosition.x + pov_x, playerTilePosition.y + pov_y);
+                if (newPosition != tile.transform.position)
+                {
+                    tile.transform.position = newPosition;
+                    terrainTiles[tileToUpdate_x, tileToUpdate_y].GetComponent<TerrainTile>().Spawn();
+                }
             }
         }
     }

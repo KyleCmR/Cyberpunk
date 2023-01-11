@@ -8,10 +8,12 @@ public class DropOnDestoy : MonoBehaviour
     [SerializeField][Range(0f, 1f)] float chanse = 1f;
 
     bool isQuitting = false;
+
     private void OnApplicationQuit()
     {
         isQuitting = true;
     }
+
     public void CheckDrop()
     {
         if (isQuitting) { return; }
