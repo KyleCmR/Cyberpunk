@@ -46,11 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb9ffb62f8019d4db90e75f35221b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: c8b67e3bd4736dd4cb1ce765956fbbaa, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
   timeToAttack: 1.5
   leftLaserObject: {fileID: 6551822409152654431}
   rightLaserObject: {fileID: 6551822409680705647}
-  laserAttackSize: {x: 4, y: 2}
-  laserDamage: 1
+  attackSize: {x: 4, y: 2}
 --- !u!1 &6551822409152654431
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class Laser_weapon : WeaponBase
             IDamagleble e = colliders[i].GetComponent<IDamagleble>();
             if (e != null)
             {
+                PostDamage(weaponStats.damage, colliders[i].transform.position);
                 e.TakeDamage(weaponStats.damage);
             }
         }

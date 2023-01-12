@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85db0dc686c97e54b8bec46d3d233a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 0adbc83118272b44dbe654ba7aaf804b, type: 2}
+  weaponStats:
+    damage: 0
+    timeToAttack: 0
   timeToAttack: 1.5
   ShootProjectilePrefab: {fileID: 4224659839477045966, guid: f16c37ec8f343394c8289fd455e3408b, type: 3}

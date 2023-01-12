@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ShootProjectileWeapon : MonoBehaviour
+public class ShootProjectileWeapon : WeaponBase
 {
-    [SerializeField] float timeToAttack;
-    float timer;
     PlayerMove playerMove;
     [SerializeField] GameObject ShootProjectilePrefab;
 
@@ -15,18 +13,7 @@ public class ShootProjectileWeapon : MonoBehaviour
         playerMove = GetComponentInParent<PlayerMove>();
     }
 
-    private void Update()
-    {
-        if (timer < timeToAttack)
-        {
-            timer += Time.deltaTime;
-            return;
-        }
-        timer = 0;
-        SpawnShootProjectile();
-
-    }
-    private void SpawnShootProjectile()
+    public override void Attack()
     {
         GameObject ShootProjectile = Instantiate(ShootProjectilePrefab);
         ShootProjectile.transform.position = transform.position;
