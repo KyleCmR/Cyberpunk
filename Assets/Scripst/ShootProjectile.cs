@@ -7,7 +7,9 @@ public class ShootProjectile : MonoBehaviour
 {
     Vector3 directiom;
     [SerializeField] float speed;
-    [SerializeField] int damage = 5;
+    public int damage = 5;
+
+    float ttl = 6f;
 
     public void SetDirection(float dir_x, float dir_y)
     {
@@ -42,6 +44,11 @@ public class ShootProjectile : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+        ttl -= Time.deltaTime;
+        if (ttl < 0f)
+        {
+            Destroy(gameObject);
         }
     }
 }

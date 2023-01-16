@@ -10,8 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e0c701bd547d434ebd6cd9dd84a4939, type: 3}
-  m_Name: Upgrade 3
+  m_Name: Laser (More Damage)
   m_EditorClassIdentifier: 
   upgradeType: 0
-  Name: Test 3
-  icon: {fileID: 21300000, guid: f39dcf0a668b96044be0246939729d42, type: 3}
+  Name: Laser Upgrade (More Damage)
+  icon: {fileID: 21300000, guid: 29076345adf060549b61e1de4ea0dab8, type: 3}
+  weaponData: {fileID: 11400000, guid: c8b67e3bd4736dd4cb1ce765956fbbaa, type: 2}
+  weaponUpgradeStats:
+    damage: 4
+    timeToAttack: 0
+    numberOfAttacks: 0

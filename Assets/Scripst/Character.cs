@@ -11,6 +11,8 @@ public class Character : MonoBehaviour
     }
     public int maxHp = 1000;
     public int currentHp = 1000;
+    public float hpRegenerationRate = 1f;
+    public float hpRegenerationTimer;
     public int armor = 0;
 
     [SerializeField] StatusBar hpBar;
@@ -23,6 +25,16 @@ public class Character : MonoBehaviour
     {
         level = GetComponent<Level>();
         coins = GetComponent<Coins>();
+    }
+
+    private void Update()
+    {
+        hpRegenerationTimer += Time.deltaTime * hpRegenerationRate;
+        if (hpRegenerationTimer > 1f)
+        {
+            Heal(1);
+            hpRegenerationTimer -= 1f;
+        }
     }
 
     public void TakeDamage(int damage)

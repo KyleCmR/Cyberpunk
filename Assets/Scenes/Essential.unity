@@ -2731,6 +2731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 1000
   currentHp: 1000
+  hpRegenerationRate: 1
+  hpRegenerationTimer: 0
   armor: 0
   hpBar: {fileID: 2113628271}
   level: {fileID: 0}
