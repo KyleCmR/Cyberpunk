@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96639232d13a653478d1f67cec74da45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6379077964613426507, guid: 01ce37d29cd049345a8953b2119314ba, type: 3}
+  enemy: {fileID: 4829094618060287579, guid: 9e2c2aaac97632c45812d25801e13c4a, type: 3}
   spawnArea: {x: 6, y: 7}
   spawnTimer: 2
 --- !u!1 &1916234145
@@ -1104,6 +1104,7 @@ GameObject:
   - component: {fileID: 2008114219}
   - component: {fileID: 2008114221}
   - component: {fileID: 2008114220}
+  - component: {fileID: 2008114222}
   m_Layer: 0
   m_Name: --WORLD--
   m_TagString: Untagged
@@ -1180,6 +1181,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+--- !u!114 &2008114222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008114216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa4be5532fefc249b09f92f4711d1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToCompleteLevel: 60
+  levelCompletePannel: {fileID: 0}
 --- !u!1 &2101315561
 GameObject:
   m_ObjectHideFlags: 0

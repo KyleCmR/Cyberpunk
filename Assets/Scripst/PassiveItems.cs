@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,16 @@ using UnityEngine;
 public class PassiveItems : MonoBehaviour
 {
     [SerializeField] List<Item> items;
-    [SerializeField] Item armorTest;
+
     Character character;
+
     private void Awake()
     {
         character = GetComponent<Character>();
     }
     private void Start()
     {
-        Equip(armorTest);
+        
     }
     public void Equip (Item itemToEquip)
     {
@@ -21,11 +23,23 @@ public class PassiveItems : MonoBehaviour
         {
             items = new List<Item>();
         }
-        items.Add(itemToEquip);
-        itemToEquip.Equip(character);
+        Item newItemInstance = new Item();
+        newItemInstance.Init(itemToEquip.Name);
+        newItemInstance.stats.Sum(itemToEquip.stats);
+
+        items.Add(newItemInstance);
+        newItemInstance.Equip(character);
     }   
     public void UnEquip(Item itemToUnEquip)
     {
         
-    }    
+    }
+
+    internal void UpgradeItem(UpgradeData upgradeData)
+    {
+        Item itemToUpgrade = items.Find(id => id.Name == upgradeData.item.Name);
+        itemToUpgrade.UnEquip(character);
+        itemToUpgrade.stats.Sum(upgradeData.itemStats);
+        itemToUpgrade.Equip(character);
+    }
 }

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageEvents:
   - time: 5
-    message: Hello
-    enemyToSpawn: {fileID: 0}
-    count: 5
+    message: 1
+    enemyToSpawn: {fileID: 11400000, guid: 38554537e607f87458b4f46dda479e7a, type: 2}
+    count: 3
   - time: 10
-    message: Nikita RAK
-    enemyToSpawn: {fileID: 0}
+    message: 2
+    enemyToSpawn: {fileID: 11400000, guid: 5a1e7471f82d2354cbae25597662dd0a, type: 2}
     count: 10
   - time: 15
-    message: Nikita Feeder
-    enemyToSpawn: {fileID: 0}
-    count: 15
+    message: 3
+    enemyToSpawn: {fileID: 11400000, guid: 38554537e607f87458b4f46dda479e7a, type: 2}
+    count: 25
