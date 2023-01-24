@@ -18,11 +18,23 @@ public class DropOnDestoy : MonoBehaviour
     {
         if (isQuitting) { return; }
 
+        if(dropItemPrefab.Count <=0)
+        {
+            Debug.LogWarning("список удаляемых элементов пуст");
+            return;
+        }
+
         if (Random.value < chanse)
         {
             GameObject toDrop = dropItemPrefab[Random.Range(0, dropItemPrefab.Count)];
-            Transform t = Instantiate(toDrop).transform;
-            t.position = transform.position;
+
+            if (toDrop == null)
+            {
+                Debug.LogWarning("DropOnDestroy ссылка на удаляемый элемент равна нулю! Проверь объект, который сбрасывает предметы при уничтожении Prefab!");
+                return;
+            }
+
+            SpawnManager.instance.SpawnObject(transform.position, toDrop);
         }
     }
 }

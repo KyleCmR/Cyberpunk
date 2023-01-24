@@ -238,6 +238,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000e5a2cda4627a4a8f4ac7b2fe7d1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &588690147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588690149}
+  - component: {fileID: 588690148}
+  m_Layer: 0
+  m_Name: --OBJECTS--
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588690148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588690147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aaf2e1889ba14745a3968ee43768d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &588690149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588690147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +391,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665032744
 GameObject:
@@ -990,9 +1034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96639232d13a653478d1f67cec74da45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageProgress: {fileID: 2008114223}
   enemy: {fileID: 4829094618060287579, guid: 9e2c2aaac97632c45812d25801e13c4a, type: 3}
   spawnArea: {x: 6, y: 7}
   spawnTimer: 2
+  bossHealthBar: {fileID: 0}
 --- !u!1 &1916234145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,8 +1149,8 @@ GameObject:
   - component: {fileID: 2008114218}
   - component: {fileID: 2008114219}
   - component: {fileID: 2008114221}
+  - component: {fileID: 2008114223}
   - component: {fileID: 2008114220}
-  - component: {fileID: 2008114222}
   m_Layer: 0
   m_Name: --WORLD--
   m_TagString: Untagged
@@ -1181,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
---- !u!114 &2008114222
+--- !u!114 &2008114223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1190,11 +1236,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2008114216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fa4be5532fefc249b09f92f4711d1fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 82f7e199e2f55ee4e95cc508c2d04b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCompleteLevel: 60
-  levelCompletePannel: {fileID: 0}
+  progressTimeRate: 10
+  progressPerSplit: 0.5
 --- !u!1 &2101315561
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,9 +32,10 @@ public class ShootProjectile : MonoBehaviour
             Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, 0.7f);
             foreach (Collider2D c in hit)
             {
-                Enemy enemy = c.GetComponent<Enemy>();
+                IDamagleble enemy = c.GetComponent<IDamagleble>();
                 if (enemy != null)
                 {
+                    PostDamage(damage, transform.position);
                     enemy.TakeDamage(damage);
                     hitDetected = true;
                     break;
@@ -50,5 +51,10 @@ public class ShootProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void PostDamage(int damage, Vector3 worldPosition)
+    {
+        MessageSystem.instance.PostMessage(damage.ToString(), worldPosition);
     }
 }

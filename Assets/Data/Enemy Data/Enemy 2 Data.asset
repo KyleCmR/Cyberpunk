@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Enemy 2
   animatedPrefab: {fileID: 6423375070044937806, guid: 325eb3d5ed6fbc04887776abd10b55ac, type: 3}
+  stats:
+    hp: 50
+    damage: 10
+    experience_reward: 200
+    moveSpeed: 1

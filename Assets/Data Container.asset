@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb45ed8caa171a468275218f40ba4d1, type: 3}
   m_Name: Data Container
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 3
+  stageCompletion: 01
