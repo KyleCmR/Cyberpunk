@@ -6,19 +6,12 @@ using UnityEngine.UIElements;
 
 public class ShootProjectileWeapon : WeaponBase
 {
-    PlayerMove playerMove;
     [SerializeField] GameObject ShootProjectilePrefab;
-    [SerializeField] float spred = 0.5f;
-
-
-    private void Awake()
-    {
-        playerMove = GetComponentInParent<PlayerMove>();
-    }
+    [SerializeField] float spread = 0.5f;
 
     public override void Attack()
     {
-
+        UpdateVectorOfAttack();
         for(int i = 0; i < weaponStats.numberOfAttacks; i++)
         {
             GameObject ShootProjectile = Instantiate(ShootProjectilePrefab);
@@ -26,16 +19,15 @@ public class ShootProjectileWeapon : WeaponBase
             Vector3 newShootProjectilePosition = transform.position;
             if (weaponStats.numberOfAttacks > 0)
             {
-                newShootProjectilePosition.y -= (spred * (weaponStats.numberOfAttacks - 1)) / 2;
-                newShootProjectilePosition.y += i * spred;
+                newShootProjectilePosition.y -= (spread * (weaponStats.numberOfAttacks - 1)) / 2;
+                newShootProjectilePosition.y += i * spread;
             }
 
             ShootProjectile.transform.position = newShootProjectilePosition;
 
             ShootProjectile shootProjectile = ShootProjectile.GetComponent<ShootProjectile>();
-            shootProjectile.SetDirection(playerMove.lastHorizontalVector, 0f);
-            shootProjectile.damage = weaponStats.damage;
+            shootProjectile.SetDirection(vectorOfAttack.x, vectorOfAttack.y);
+            shootProjectile.damage = GetDamage();
         }
-
     }
 }

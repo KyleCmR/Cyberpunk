@@ -16,19 +16,6 @@ public class Laser_weapon : WeaponBase
         playerMove = GetComponentInParent<PlayerMove>();
     }
 
-    private void ApplyDamage(Collider2D[] colliders)
-    {
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            IDamagleble e = colliders[i].GetComponent<IDamagleble>();
-            if (e != null)
-            {
-                PostDamage(weaponStats.damage, colliders[i].transform.position);
-                e.TakeDamage(weaponStats.damage);
-            }
-        }
-    }
-
     public override void Attack()
     {
         StartCoroutine(AttackProcess());
@@ -38,7 +25,7 @@ public class Laser_weapon : WeaponBase
     {
         for (int i = 0; i < weaponStats.numberOfAttacks; i++)
         {
-            if (playerMove.lastHorizontalVector > 0)
+            if (playerMove.lastHorizontalDeCoupledVector > 0)
             {
                 rightLaserObject.SetActive(true);
                 Collider2D[] colliders = Physics2D.OverlapBoxAll(rightLaserObject.transform.position, attackSize, 0f);

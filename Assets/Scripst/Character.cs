@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    private void Start()
-    {
-        hpBar.SetState(currentHp, maxHp);
-    }
     public int maxHp = 1000;
     public int currentHp = 1000;
     public float hpRegenerationRate = 1f;
     public float hpRegenerationTimer;
     public int armor = 0;
+    public float damageBonus;
 
     [SerializeField] StatusBar hpBar;
 
@@ -21,11 +18,31 @@ public class Character : MonoBehaviour
     [HideInInspector] public Coins coins;
     private bool isDead;
 
+    private void Start()
+    {
+        ApplyPersistantUpgrades();
+
+        hpBar.SetState(currentHp, maxHp);
+    }
+
+    private void ApplyPersistantUpgrades()
+    {
+        int hpUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.HP);
+
+        maxHp += maxHp / 10 * hpUpgradeLevel;
+
+        int damageUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Damage);
+
+        damageBonus = 1f + 0.1f * damageUpgradeLevel;
+    }
+
     private void Awake()
     {
         level = GetComponent<Level>();
         coins = GetComponent<Coins>();
     }
+
+    [SerializeField] DataContainer dataContainer;
 
     private void Update()
     {

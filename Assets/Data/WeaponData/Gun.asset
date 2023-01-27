@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb45ed8caa171a468275218f40ba4d1, type: 3}
-  m_Name: Data Container
+  m_Script: {fileID: 11500000, guid: 734b7dc1c7da11d4ba115869d586b1f2, type: 3}
+  m_Name: Gun
   m_EditorClassIdentifier: 
-  coins: 3
-  stageCompletion: 01
-  upgrades:
-  - persistentUpgrades: 0
-    level: 10
-    costToUpgrade: 100
-  - persistentUpgrades: 1
-    level: 7
-    costToUpgrade: 100
+  Name: Gun
+  stats:
+    damage: 1
+    timeToAttack: 1
+    numberOfAttacks: 1
+  weaponBasePrefab: {fileID: 6209343932356452839, guid: 9a71c8f5895115f4cb62cdf21f468558, type: 3}
+  upgrades: []
