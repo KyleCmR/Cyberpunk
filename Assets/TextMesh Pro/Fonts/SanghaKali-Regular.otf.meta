@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5095a4d1244c0c1428cb3c938b8b2c92
+guid: 7d1ac31cba3426c4aa2b8290497b75a0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Gemsbuck 01
+  - Sangha Kali
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
