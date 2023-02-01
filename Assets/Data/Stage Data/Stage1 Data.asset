@@ -36,4 +36,4 @@ MonoBehaviour:
     message: 3
     enemyToSpawn: {fileID: 11400000, guid: 38554537e607f87458b4f46dda479e7a, type: 2}
     objectToSpawn: {fileID: 0}
-    count: 25
+    count: 3

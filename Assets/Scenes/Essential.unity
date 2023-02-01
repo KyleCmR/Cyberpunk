@@ -3405,9 +3405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e623c902566154a8f46c0ebf1a5719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1000
-  currentHp: 1000
-  hpRegenerationRate: 1
+  maxHp: 100000
+  currentHp: 100000
+  hpRegenerationRate: 20
   hpRegenerationTimer: 0
   armor: 0
   damageBonus: 0

@@ -13,6 +13,6 @@ public class CoinsText : MonoBehaviour
 
     void Update()
     {
-        text.text = "Coins:" + dataContainer.coins.ToString();
+        text.text = $"Coins" + dataContainer.coins.ToString();
     }
 }
