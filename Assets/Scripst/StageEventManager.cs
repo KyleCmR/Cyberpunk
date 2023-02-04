@@ -58,11 +58,14 @@ public class StageEventManager : MonoBehaviour
         playerWin.Win();
     }
 
-    private void SpawnEnemy(bool bossEnemy)
+    private void SpawnEnemy(bool bossEnemy) 
     {
-        for (int i = 0; i < stageData.stageEvents[eventIndexer].count; i++)
+        StageEvent currentEvent = stageData.stageEvents[eventIndexer];
+        enemiesManager.AddGroupToSpawn(currentEvent.enemyToSpawn, currentEvent.count, bossEnemy);
+
+        if(currentEvent.isRepeatedEvent == true)
         {
-            enemiesManager.SpawnEnemy(stageData.stageEvents[eventIndexer].enemyToSpawn, bossEnemy);
+            enemiesManager.AddRepeatedSpawn(currentEvent, bossEnemy);
         }
     }
 

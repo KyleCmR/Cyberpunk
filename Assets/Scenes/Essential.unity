@@ -3405,9 +3405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e623c902566154a8f46c0ebf1a5719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100000
-  currentHp: 100000
-  hpRegenerationRate: 20
+  maxHp: 1000
+  currentHp: 1000
+  hpRegenerationRate: 50
   hpRegenerationTimer: 0
   armor: 0
   damageBonus: 0
@@ -3488,7 +3488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectsContainer: {fileID: 247023822}
-  startingWeapon: {fileID: 11400000, guid: 3d4bd45f477a8424d91f61570285d720, type: 2}
+  startingWeapon: {fileID: 11400000, guid: 3fa5654fb76fd174b888b265b16c782b, type: 2}
 --- !u!1 &1259561048
 GameObject:
   m_ObjectHideFlags: 0
