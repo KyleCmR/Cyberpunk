@@ -50,7 +50,9 @@ MonoBehaviour:
   weaponStats:
     damage: 0
     timeToAttack: 0
-  timeToAttack: 1.5
+    numberOfAttacks: 0
+  vectorOfAttack: {x: 0, y: 0}
+  attackDirection: 0
   leftLaserObject: {fileID: 6551822409152654431}
   rightLaserObject: {fileID: 6551822409680705647}
   attackSize: {x: 4, y: 2}
@@ -79,14 +81,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6551822409152654431}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.00027519825}
+  m_LocalPosition: {x: -1.384, y: 0.001, z: 0}
+  m_LocalScale: {x: 0.2105, y: 0.21982001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6551822408838023268}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.968}
 --- !u!212 &6551822409152654425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1714458104, guid: 6aa185fd99c78ca479f59c6c1355e3f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82f48e11f02c9244e84fe9875ec18a9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -177,8 +179,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6551822409680705647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalPosition: {x: 1.3553, y: 0.015, z: 0}
+  m_LocalScale: {x: 0.2036656, y: 0.2206262, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6551822408838023268}
@@ -225,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1714458104, guid: 6aa185fd99c78ca479f59c6c1355e3f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82f48e11f02c9244e84fe9875ec18a9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

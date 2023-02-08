@@ -3292,7 +3292,7 @@ GameObject:
   - component: {fileID: 1255238678}
   m_Layer: 0
   m_Name: PlayerCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3488,7 +3488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectsContainer: {fileID: 247023822}
-  startingWeapon: {fileID: 11400000, guid: 3fa5654fb76fd174b888b265b16c782b, type: 2}
+  startingWeapon: {fileID: 11400000, guid: c8b67e3bd4736dd4cb1ce765956fbbaa, type: 2}
 --- !u!1 &1259561048
 GameObject:
   m_ObjectHideFlags: 0
