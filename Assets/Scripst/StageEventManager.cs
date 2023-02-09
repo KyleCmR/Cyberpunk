@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StageEventManager : MonoBehaviour
 {
     [SerializeField] StageData stageData;
-    [SerializeField] EnemiesManager enemiesManager;
+    EnemiesManager enemiesManager;
 
     StageTime stageTime;
     int eventIndexer;
@@ -14,6 +11,7 @@ public class StageEventManager : MonoBehaviour
     private void Start()
     {
         playerWin = FindObjectOfType<PlayerWinManager>();
+        enemiesManager = FindObjectOfType<EnemiesManager>();
     }
 
     private void Awake()
